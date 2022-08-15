@@ -8,6 +8,13 @@ Clone wherever and create symlinks into /etc/nixos:
 
 ```
 git clone https://github.com/FloppaDev/nixos-config.git
+
+# Generate a new hardware config if necessary:
+nixos-generate-config
+rm /etc/nixos/configuration.nix
+mv /etc/nixos/hardware-configuration.nix nixos-config/machines/desktop-amd/hardware.nix
+
+cd nixos-config
 ln -s $(pwd)/nixos-config /etc/nixos/
 ln -s $(pwd)/nixos-config/configuration.nix /etc/nixos/
 ```
