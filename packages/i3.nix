@@ -14,7 +14,7 @@
     environment.systemPackages = with pkgs; [
       scrot #Screenshots
       xclip #Image clipboard
-      xdotool #X11 tools
+      xdotool #X11 tools, used in workspace shenans
       xorg.xkill #Close window with mouse
       pavucontrol #Sound control
       kitty #OpenGl terminal

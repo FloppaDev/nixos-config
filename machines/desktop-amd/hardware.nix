@@ -16,18 +16,18 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/562ea604-57da-4e48-b22c-b9c9eb21cc08";
       fsType = "ext4";
-      options = [ "noatime" "nodiratime" "discard" ];
+      options = [ "noatime" "nodiratime" "discard" ]; #SSD optimizations
     };
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/1860-5146";
       fsType = "vfat";
-      options = [ "noatime" "nodiratime" "discard" ];
+      options = [ "noatime" "nodiratime" "discard" ]; #SSD optimizations
     };
 
   fileSystems."/a" =
     { label = "a";
-      options = [ "noatime" "nodiratime" "discard" ];
+      options = [ "noatime" "nodiratime" "discard" ]; #SSD optimizations
     };
 
   swapDevices =

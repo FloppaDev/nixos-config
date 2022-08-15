@@ -14,12 +14,12 @@
     ];
 
     environment.systemPackages = with pkgs; [
-      steam-run #Steam runtime (this is not steam)
+      steam-run #Steam runtime (not steam)
 
       firefox
       discord
 
-      haruna #Video player
+      haruna #Media player
 
       rustup
       nodejs
@@ -32,13 +32,13 @@
 
       unityhub
 
-      xorg.xmodmap
-      xorg.xev
+      xorg.xmodmap #Maps compose key
+      xorg.xev #X11 events viewer
 
       libreoffice
 
-      yt-dlp-light
-      ffmpeg
+      yt-dlp-light #Youtube download
+      ffmpeg #Encoder, optional dependency of yt-dlp-light
 
       krita
     ];

@@ -12,11 +12,11 @@
   environment.systemPackages = with pkgs; [
     wget
     git
-    neofetch
-    btop
+    neofetch #Pc specs
+    btop #Task manager
     nnn #File manager
-    tree
-    ponysay
-    p7zip
+    tree #Print directory trees
+    ponysay #Pony
+    p7zip #7zip
   ];
 }
