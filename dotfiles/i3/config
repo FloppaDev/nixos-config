@@ -1,0 +1,133 @@
+
+# Borders.
+bindsym Mod4+u border none
+bindsym Mod4+y border pixel 3
+bindsym Mod4+n border normal
+
+# Opengl terminal.
+bindsym Mod4+Shift+Return exec kitty
+
+# Close focused window.
+bindsym Mod4+Shift+c kill
+
+# Gui file manager.
+bindsym Mod4+Shift+f exec thunar
+
+# Sound Control.
+bindsym Mod4+Shift+p exec pavucontrol
+
+# Close X11 window with mouse.
+bindsym --release Mod4+Shift+x exec xkill
+
+# Take a screenshot.
+bindsym --release Mod4+Shift+s exec /a/apps/snip.sh
+
+# Change focus.
+bindsym Mod4+j focus left
+bindsym Mod4+Left focus left
+bindsym Mod4+k focus right
+bindsym Mod4+Right focus right
+bindsym Mod4+h focus down
+bindsym Mod4+Down focus down
+bindsym Mod4+l focus up
+bindsym Mod4+Up focus up
+
+# Move focused.
+bindsym Mod4+Shift+j move left
+bindsym Mod4+Shift+Left move left
+bindsym Mod4+Shift+k move right
+bindsym Mod4+Shift+Right move right
+bindsym Mod4+Shift+h move down
+bindsym Mod4+Shift+Down move down
+bindsym Mod4+Shift+l move up
+bindsym Mod4+Shift+Up move up
+
+# Window modes.
+bindsym Mod4+f fullscreen toggle
+bindsym Mod4+Space floating toggle
+
+# Switch workspace.
+bindsym Mod4+Mod1+j workspace prev
+bindsym Mod4+Mod1+Left workspace prev
+bindsym Mod4+Mod1+k workspace next
+bindsym Mod4+Mod1+Right workspace next
+bindsym Mod4+Control+j focus output left
+bindsym Mod4+Control+Left focus output left
+bindsym Mod4+Control+k focus output right
+bindsym Mod4+Control+Right focus output right
+
+# Reload config.
+bindsym Mod4+Shift+i reload
+
+# Restart i3.
+bindsym Mod4+Shift+r restart
+
+# Quit i3.
+bindsym Mod4+Shift+q exit
+
+# Startup
+exec nitrogen --restore
+exec kitty
+
+# 10 workspaces per display.
+workspace "l0" output HDMI-A-1
+workspace "l1" output HDMI-A-1
+workspace "l2" output HDMI-A-1
+workspace "l3" output HDMI-A-1
+workspace "l4" output HDMI-A-1
+workspace "l5" output HDMI-A-1
+workspace "l6" output HDMI-A-1
+workspace "l7" output HDMI-A-1
+workspace "l8" output HDMI-A-1
+workspace "l9" output HDMI-A-1
+
+workspace "r0" output HDMI-A-0
+workspace "r1" output HDMI-A-0
+workspace "r2" output HDMI-A-0
+workspace "r3" output HDMI-A-0
+workspace "r4" output HDMI-A-0
+workspace "r5" output HDMI-A-0
+workspace "r6" output HDMI-A-0
+workspace "r7" output HDMI-A-0
+workspace "r8" output HDMI-A-0
+workspace "r9" output HDMI-A-0
+
+set $tools ~/.config/i3/tools
+
+bindsym Mod4+0 exec $tools/switch.sh 0
+bindsym Mod4+1 exec $tools/switch.sh 1
+bindsym Mod4+2 exec $tools/switch.sh 2
+bindsym Mod4+3 exec $tools/switch.sh 3
+bindsym Mod4+4 exec $tools/switch.sh 4
+bindsym Mod4+5 exec $tools/switch.sh 5
+bindsym Mod4+6 exec $tools/switch.sh 6
+bindsym Mod4+7 exec $tools/switch.sh 7
+bindsym Mod4+8 exec $tools/switch.sh 8
+bindsym Mod4+9 exec $tools/switch.sh 9
+
+bindsym Mod4+Shift+0 exec $tools/move.sh 0
+bindsym Mod4+Shift+1 exec $tools/move.sh 1
+bindsym Mod4+Shift+2 exec $tools/move.sh 2
+bindsym Mod4+Shift+3 exec $tools/move.sh 3
+bindsym Mod4+Shift+4 exec $tools/move.sh 4
+bindsym Mod4+Shift+5 exec $tools/move.sh 5
+bindsym Mod4+Shift+6 exec $tools/move.sh 6
+bindsym Mod4+Shift+7 exec $tools/move.sh 7
+bindsym Mod4+Shift+8 exec $tools/move.sh 8
+bindsym Mod4+Shift+9 exec $tools/move.sh 9
+
+exec i3-msg workspace "l1"
+exec i3-msg workspace "r1"
+
+for_window [title="alsamixer"] floating enable border pixel 1
+for_window [class="GParted"] floating enable border normal
+for_window [title="i3_help"] floating enable stick enable border normal
+for_window [class="Lightdm-settings"] floating enable
+for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="Pavucontrol"] floating enable
+
+floating_modifier Mod4
+for_window [urgent=latest] focus
+default_border pixel 3
+
+exec --no-startup-id "xmodmap ~/.Xmodmap"

@@ -1,0 +1,8 @@
+[user]
+	email = rschuhler@hotmail.fr
+	name = Floppa
+[init]
+	defaultBranch = main
+[safe]
+	directory = /etc/nixos
+	directory = *
