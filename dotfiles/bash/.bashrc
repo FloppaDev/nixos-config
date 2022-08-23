@@ -37,3 +37,6 @@ xset s off
 xset -dpms
 
 set -o vi
+
+# Map tablet to main screen.
+xinput map-to-output 'Wacom Intuos PT S Pen' 'HDMI-A-0'

@@ -41,5 +41,7 @@
       ffmpeg #Encoder, optional dependency of yt-dlp-light
 
       krita
+
+      usbutils
     ];
 }
