@@ -29,6 +29,7 @@
       ninja
 
       lutris
+      retroarchFull
 
       unityhub
 
@@ -43,5 +44,7 @@
       krita
 
       usbutils
+
+      filezilla
     ];
 }
