@@ -19,5 +19,6 @@
     ponysay #Pony
     p7zip #7zip
     ugrep
+    bintools
   ];
 }
