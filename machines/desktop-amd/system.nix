@@ -7,6 +7,8 @@
     extraGroups = [ "wheel" "audio" ];
   };
 
+  time.hardwareClockInLocalTime = true;
+
   networking.hostName = "floppa";
   networking.useDHCP = false;
   networking.interfaces.enp37s0.useDHCP = true;

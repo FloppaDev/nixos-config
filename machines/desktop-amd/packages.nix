@@ -27,6 +27,7 @@
       gcc
       cmake
       ninja
+      jre8
 
       lutris
       retroarchFull
