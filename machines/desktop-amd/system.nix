@@ -36,6 +36,9 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
+  services.printing.enable = true;
+  services.printing.drivers = [];
+
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
   services.xserver.layout = "us";

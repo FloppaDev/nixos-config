@@ -1,69 +1,71 @@
 
+set $mod Mod4
+
 # Borders.
-bindsym Mod4+u border none
-bindsym Mod4+y border pixel 3
-bindsym Mod4+n border normal
+bindsym $mod+u border none
+bindsym $mod+y border pixel 3
+bindsym $mod+n border normal
 
 # Opengl terminal.
-bindsym Mod4+Shift+Return exec kitty
+bindsym $mod+Shift+Return exec kitty
 
 # Close focused window.
-bindsym Mod4+Shift+c kill
+bindsym $mod+Shift+c kill
 
 # Gui file manager.
-bindsym Mod4+Shift+f exec thunar
+bindsym $mod+Shift+f exec thunar
 
 # Sound Control.
-bindsym Mod4+Shift+p exec pavucontrol
+bindsym $mod+Shift+p exec pavucontrol
 
 # Close X11 window with mouse.
-bindsym --release Mod4+Shift+x exec xkill
+bindsym --release $mod+Shift+x exec xkill
 
 # Take a screenshot.
-bindsym --release Mod4+Shift+s exec /a/apps/snip.sh
+bindsym --release $mod+Shift+s exec /a/apps/snip.sh
 
 # Change focus.
-bindsym Mod4+j focus left
-bindsym Mod4+Left focus left
-bindsym Mod4+k focus right
-bindsym Mod4+Right focus right
-bindsym Mod4+h focus down
-bindsym Mod4+Down focus down
-bindsym Mod4+l focus up
-bindsym Mod4+Up focus up
+bindsym $mod+j focus left
+bindsym $mod+Left focus left
+bindsym $mod+k focus right
+bindsym $mod+Right focus right
+bindsym $mod+h focus down
+bindsym $mod+Down focus down
+bindsym $mod+l focus up
+bindsym $mod+Up focus up
 
 # Move focused.
-bindsym Mod4+Shift+j move left
-bindsym Mod4+Shift+Left move left
-bindsym Mod4+Shift+k move right
-bindsym Mod4+Shift+Right move right
-bindsym Mod4+Shift+h move down
-bindsym Mod4+Shift+Down move down
-bindsym Mod4+Shift+l move up
-bindsym Mod4+Shift+Up move up
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+k move right
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h move down
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+Up move up
 
 # Window modes.
-bindsym Mod4+f fullscreen toggle
-bindsym Mod4+Space floating toggle
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Space floating toggle
 
 # Switch workspace.
-bindsym Mod4+Mod1+j workspace prev
-bindsym Mod4+Mod1+Left workspace prev
-bindsym Mod4+Mod1+k workspace next
-bindsym Mod4+Mod1+Right workspace next
-bindsym Mod4+Control+j focus output left
-bindsym Mod4+Control+Left focus output left
-bindsym Mod4+Control+k focus output right
-bindsym Mod4+Control+Right focus output right
+bindsym $mod+Mod1+j workspace prev
+bindsym $mod+Mod1+Left workspace prev
+bindsym $mod+Mod1+k workspace next
+bindsym $mod+Mod1+Right workspace next
+bindsym $mod+Control+j focus output left
+bindsym $mod+Control+Left focus output left
+bindsym $mod+Control+k focus output right
+bindsym $mod+Control+Right focus output right
 
 # Reload config.
-bindsym Mod4+Shift+i reload
+bindsym $mod+Shift+i reload
 
 # Restart i3.
-bindsym Mod4+Shift+r restart
+bindsym $mod+Shift+r restart
 
 # Quit i3.
-bindsym Mod4+Shift+q exit
+bindsym $mod+Shift+q exit
 
 # Startup
 exec nitrogen --restore
@@ -94,27 +96,27 @@ workspace "r9" output HDMI-A-0
 
 set $tools ~/.config/i3/tools
 
-bindsym Mod4+0 exec $tools/switch.sh 0
-bindsym Mod4+1 exec $tools/switch.sh 1
-bindsym Mod4+2 exec $tools/switch.sh 2
-bindsym Mod4+3 exec $tools/switch.sh 3
-bindsym Mod4+4 exec $tools/switch.sh 4
-bindsym Mod4+5 exec $tools/switch.sh 5
-bindsym Mod4+6 exec $tools/switch.sh 6
-bindsym Mod4+7 exec $tools/switch.sh 7
-bindsym Mod4+8 exec $tools/switch.sh 8
-bindsym Mod4+9 exec $tools/switch.sh 9
+bindsym $mod+0 exec $tools/switch.sh 0
+bindsym $mod+1 exec $tools/switch.sh 1
+bindsym $mod+2 exec $tools/switch.sh 2
+bindsym $mod+3 exec $tools/switch.sh 3
+bindsym $mod+4 exec $tools/switch.sh 4
+bindsym $mod+5 exec $tools/switch.sh 5
+bindsym $mod+6 exec $tools/switch.sh 6
+bindsym $mod+7 exec $tools/switch.sh 7
+bindsym $mod+8 exec $tools/switch.sh 8
+bindsym $mod+9 exec $tools/switch.sh 9
 
-bindsym Mod4+Shift+0 exec $tools/move.sh 0
-bindsym Mod4+Shift+1 exec $tools/move.sh 1
-bindsym Mod4+Shift+2 exec $tools/move.sh 2
-bindsym Mod4+Shift+3 exec $tools/move.sh 3
-bindsym Mod4+Shift+4 exec $tools/move.sh 4
-bindsym Mod4+Shift+5 exec $tools/move.sh 5
-bindsym Mod4+Shift+6 exec $tools/move.sh 6
-bindsym Mod4+Shift+7 exec $tools/move.sh 7
-bindsym Mod4+Shift+8 exec $tools/move.sh 8
-bindsym Mod4+Shift+9 exec $tools/move.sh 9
+bindsym $mod+Shift+0 exec $tools/move.sh 0
+bindsym $mod+Shift+1 exec $tools/move.sh 1
+bindsym $mod+Shift+2 exec $tools/move.sh 2
+bindsym $mod+Shift+3 exec $tools/move.sh 3
+bindsym $mod+Shift+4 exec $tools/move.sh 4
+bindsym $mod+Shift+5 exec $tools/move.sh 5
+bindsym $mod+Shift+6 exec $tools/move.sh 6
+bindsym $mod+Shift+7 exec $tools/move.sh 7
+bindsym $mod+Shift+8 exec $tools/move.sh 8
+bindsym $mod+Shift+9 exec $tools/move.sh 9
 
 exec i3-msg workspace "l1"
 exec i3-msg workspace "r1"
@@ -126,7 +128,7 @@ for_window [class="Lightdm-settings"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Pavucontrol"] floating enable
 
-floating_modifier Mod4
+floating_modifier $mod
 for_window [urgent=latest] focus
 default_border pixel 3
 

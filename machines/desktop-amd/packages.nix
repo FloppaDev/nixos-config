@@ -45,6 +45,7 @@
       krita
 
       usbutils
+      gutenprint
 
       filezilla
     ];
