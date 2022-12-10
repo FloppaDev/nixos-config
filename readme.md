@@ -14,9 +14,10 @@ nixos-generate-config
 rm /etc/nixos/configuration.nix
 mv /etc/nixos/hardware-configuration.nix nixos-config/machines/desktop-amd/hardware.nix
 
+# Symlink the repo and the relevant config file:
 cd nixos-config
-ln -s $(pwd)/nixos-config /etc/nixos/
-ln -s $(pwd)/nixos-config/configuration.nix /etc/nixos/
+ln -s $(pwd) /etc/nixos/
+ln -s $(pwd)/hosts/amd-desktop/configuration.nix /etc/nixos/
 ```
 
 Build config:
