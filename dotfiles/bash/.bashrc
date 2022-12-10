@@ -26,6 +26,9 @@ w="\[\033[0m\]"
 tflag="$bg_b $bg_p $bg_w $bg_p $bg_b $w"
 export PS1=" $tflag $b[\u \W]$w "
 
+# Keep PS1 in nix-shell
+export NIX_SHELL_PRESERVE_PROMPT=1
+
 alias sudo='sudo '
 alias n='nnn -eHTv'
 alias where='which'

@@ -27,6 +27,13 @@
      rocm-opencl-icd
      rocm-opencl-runtime
      amdvlk
+     vaapiVdpau
+     libvdpau-va-gl
+  ];
+
+  # HIP support
+  systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.hip}"
   ];
 
   sound.enable = true;
@@ -56,5 +63,5 @@
   ];
 
   # /!\ Before changing this value read the documentation!
-  system.stateVersion = "22.05";
+  system.stateVersion = "22.11";
 }
