@@ -15,15 +15,10 @@
 
     environment.systemPackages = with pkgs; [
       steam-run #Steam runtime (not steam)
+      radeontop #Gpu info
 
       discord
       firefox-esr #Lts firefox
-
-      radeontop #Gpu info
-      clinfo #OpenCL info
-      vdpauinfo #Video info
-      libva-utils #Video info etc. (vainfo)
-      usbutils
 
       haruna #Media player
       yt-dlp-light #Youtube download (ffmpeg dependency)
@@ -34,13 +29,10 @@
 
       unityhub
       blender
-
-      xorg.xmodmap #Maps compose key
-      xorg.xev #X11 events viewer
-
+      krita
       libreoffice
 
-      krita
+      xorg.xmodmap #Maps compose key
 
       filezilla
     ];
