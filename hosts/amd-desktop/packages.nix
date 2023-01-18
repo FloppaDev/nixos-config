@@ -35,6 +35,11 @@
       xorg.xmodmap #Maps compose key
 
       filezilla
+
+      renderdoc
+
+      ardour
+      yabridge
     ];
 
 }

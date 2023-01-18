@@ -33,5 +33,7 @@ in {
     home.file.".Xmodmap".source = ../../dotfiles/xmodmap/.Xmodmap;
 
     home.file.".vimrc".source = ../../dotfiles/vim/.vimrc;
+    home.file.".vim".source = ../../dotfiles/vim/.vim;
+    home.file.".vim".recursive = true;
   };
 }

@@ -20,5 +20,6 @@
     p7zip #7zip
     ugrep
     bintools
+    scc #Count lines of code.
   ];
 }

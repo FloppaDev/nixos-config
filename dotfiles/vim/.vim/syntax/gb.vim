@@ -1,0 +1,1 @@
+/a/projects/personal/gbz80/.vim/syntax/gb.vim
